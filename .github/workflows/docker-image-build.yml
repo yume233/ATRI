@@ -34,5 +34,5 @@ jobs:
         with:
           push: true
           tags: |
-            yume233/atri:${{ steps.get-atri-version.outputs.DOCKER_TAG }}
-            yume233/atri:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/atri:${{ steps.get-atri-version.outputs.DOCKER_TAG }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/atri:latest
