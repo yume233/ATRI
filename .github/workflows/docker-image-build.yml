@@ -13,11 +13,6 @@ jobs:
       - name: 🚀 Run Checkout
       - uses: actions/checkout@v3
 
-      - name: 🚀 使用 python3.9
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-
       - name: 🚀 Set up QEMU
         uses: docker/setup-qemu-action@v2
 
@@ -29,6 +24,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: 🚀 使用 python3.9
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
 
       - name: 📝 获取 ATRI 版本号
         id: get-atri-version
