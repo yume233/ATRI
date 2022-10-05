@@ -15,7 +15,7 @@ jobs:
       - name: 🚀 Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: 🚀 Run Checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: 🚀 使用 python3.9
         uses: actions/setup-python@v4
         with:
